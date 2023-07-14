@@ -1,0 +1,9 @@
+<?php
+    include('heade.php');
+?>
+<body>
+    <h1>Inicio</h1>
+</body>
+<?php
+    include('footer.php');
+?>
