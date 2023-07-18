@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>registro e inicio de sesion</title>
+</head>
+<body>
+    <div class="container-form register hide">
+        <div class="information">
+            <div class="info-childs">
+                <h1>Bienvenido</h1>
+                <p>Para poder ingresar porfavor inicia sesión con tus datos</p>
+                <input type="button" value="Iniciar sesion" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear una cuenta</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-linkedin-square' ></i>
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+                <p>Ó registrate con tu email</p>
+                <form class="form CrearUsuario" id="formulario" action="conexionBD/insert_user.php" method="POST">
+                    <label>
+                        <i class='bx bxs-user-circle'></i>
+                        <input type="text" name="name" placeholder="Nombres" required>
+                        <span></span>
+                    </label>
+                    <label>
+                        <i class='bx bxs-label'></i>
+                        <input type="text" name="lastNameP" placeholder="Apellido paterno" required>
+                        <span></span>
+                    </label>
+                    <label>
+                        <i class='bx bxs-label'></i>
+                        <input type="text" name="lastNameM" placeholder="Apellido materno" required>
+                        <span></span>
+                    </label>
+                    <label>
+                        <i class='bx bxs-envelope'></i>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <span></span>
+                    </label>
+                    <label>
+                        <i class='bx bxs-lock'></i>
+                        <input type="password" name="password" placeholder="Contraseña" required>
+                        <p></p>
+                    </label>
+                    <input type="submit" onclick="alerta()" value="Registrarse">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-form login ">
+        <div class="information">
+            <div class="info-childs">
+                <h1>!!Bienvenido Nuevamente¡¡</h1>
+                <p>Si aun no tienes una cuenta porfavor registrate aqui</p>
+                <input type="button" value="Registrate" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Iniciar sesion</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-linkedin-square' ></i>
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+                <p>Iniciar sesión con una cuenta</p>
+                <form class="form IniciarSesion" action="conexionBD/validacion.php" method="post">
+                    <label>
+                        <i class='bx bxs-envelope'></i>
+                        <input type="email" name="emailInicio" placeholder="Email" required>
+                        <span></span>
+                    </label>
+                    <label>
+                        <i class='bx bxs-lock'></i>
+                        <input type="password" name="passwordInicio" placeholder="Contraseña" required>
+                        <span></span>
+                    </label>
+                    <input type="submit"  value="Iniciar sesión">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="scrips/script.js"></script>
+</body>
+</html>
